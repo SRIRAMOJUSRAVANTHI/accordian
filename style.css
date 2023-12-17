@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=poppins&family=Robots&display=swap");
+*{
+    font-family: "roboto", sans-serif;
+    margin:0;
+    padding:0;
+    outline:none;
+    border:none;
+
+}
+body{
+    background: #f4f4f4;
+}
+.container{
+    max-width:700px;
+    margin: 20px auto;
+}
+.container .heading{
+    text-align:center;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.container .accordian-wrapper{
+    padding:0 20px;
+}
+.container .accordian{
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.container .accordian.active .accodian-heading{
+    background: #3e57d0;
+    color: #fff;
+}
+.container .accordian.active .accodian-heading i{
+    color: #fff;
+    transform:rotate(180deg);
+    transition:transform 0.2s 0.1s;
+}
+.container .accordian.active .accodian-heading{
+    background: #3e57d0;
+    color: #fff;
+}
+
+.container .accordian-heading{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px ;
+    background: #fff;
+    border:2px solid #333;
+    padding: 15px 20px;
+
+}
+.container .accordian.active .accodian-content{
+    display:block;
+}
+.container .accordian-heading h3{
+    font-size: 20px;
+}
+.container .accordian-content{
+    padding: 15px 20px;
+    border: 2px solid #333;
+    font-size: 15px;
+    background: #fff;
+    border-top: 0;
+    display: none;
+    animation:animate 0.2s linear backward;
+    line-height:2;
+    transform-origin: top;
+}
+@keyframes animate{
+    0%{
+        transform: scaleY(0);
+    }
+}
